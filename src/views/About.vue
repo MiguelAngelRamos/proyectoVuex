@@ -1,5 +1,15 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+     <h1>{{ title }}</h1>
+     <h2>{{ saldo }}</h2>
   </div>
 </template>
+
+<script>
+import { mapState } from 'vuex';
+ export default {
+   computed: {
+     ...mapState(['saldo', 'title'])
+   }
+ }
+</script>
